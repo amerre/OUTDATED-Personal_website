@@ -4,9 +4,9 @@ This is my personal website, lightweight and minimalistic.
 
 ## Built With
 
-- [Vue.js](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-- [Vue CLI 3](https://maven.apache.org/) - Standard Tooling for Vue.js Development
-- [Sass](https://rometools.github.io/rome/) - The CSS preprocessor used (CSS with superpowers!)
+- [Vue.js](https://vuejs.org/) - The web framework used
+- [Vue CLI 3](https://cli.vuejs.org/) - Standard Tooling for Vue.js Development
+- [Sass](https://sass-lang.com/) - The CSS preprocessor used (CSS with superpowers!)
 - [BEM](http://getbem.com/introduction/) - The Block, Element and Modifier methodology applied on my Sass files.
 
 ## License
