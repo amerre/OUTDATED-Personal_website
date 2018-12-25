@@ -1,28 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TextBloc/>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import TextBloc from "./components/TextBloc.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "app",
+  data() {
+    return {
+      github: "https://github.com/amerre",
+      codepen: "https://codepen.io/adrizu/",
+      hetic: "https://www.hetic.net/formations/grande-ecole"
+    };
+  },
   components: {
-    HelloWorld
+    TextBloc,
+    Footer
   }
 };
 </script>
 
 <style lang="scss">
+@import "./scss/_variables.scss";
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.09px;
+  font-family: "Karla", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 810px;
+  margin: 150px auto auto auto;
 }
 </style>
