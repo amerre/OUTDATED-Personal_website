@@ -1,10 +1,18 @@
 <template>
-  <a href="http://google.fr">{{ linkText }}</a>
+  <a :href="linkUrl" target="_blank">{{ linkText }}</a>
 </template>
 
 <script>
 export default {
-  props: ["linkText"]
+  data() {
+    return {
+      selectedLink: this.linkText
+    };
+  },
+  props: {
+    linkText: String,
+    linkUrl: String
+  }
 };
 </script>
 
@@ -14,12 +22,11 @@ a {
   text-decoration: none;
   color: $first-color;
   background-position-y: 0;
-  display: inline;
   background: linear-gradient(180deg, $second-color, $second-color) no-repeat 0
     1.2rem;
   transition: background-position-y 0.15s ease-out;
-}
-a:hover {
-  background-position-y: 0;
+  &:hover {
+    background-position-y: 0;
+  }
 }
 </style>

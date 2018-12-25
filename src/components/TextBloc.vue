@@ -1,43 +1,71 @@
 <template>
   <div class="wrapper">
-    <span class="wrapper__emoji">👨🏻‍💻</span>
+    <transition name="fade">
+      <app-ItsMe v-if="hiddenText.itsMe"/>
+    </transition>
+    <span
+      class="wrapper__emoji"
+      @mouseover="hiddenText.itsMe = true"
+      @mouseleave="hiddenText.itsMe = false"
+    >👨🏻‍💻</span>
     <p>Hi, I’m Adrien</p>
     <p>I’m living in Montreuil, near Paris, where I’m studying in
-      <app-Link linkText="hetic"/>. I’m playing around with web development, design and project management.
+      <app-Link linkText="Hetic" :linkUrl="hetic"/>. I’m playing around with web development, design and project management.
     </p>
     <p>I’m actualy a front-end developer, but currently learning Vue.js and Node.js in order to become a full-stack Javascript ninja.</p>
     <p>To see some of my work, check my
-      <app-Link linkText="Github"/>&nbsp;or my
-      <app-Link linkText="Codepen"/>.
+      <app-Link linkText="Github" :linkUrl="github"/>&nbsp;or my
+      <app-Link linkText="Codepen" :linkUrl="codepen"/>.
     </p>
     <p>
-      I’m open to any work propositions, but I’m looking especially for an 5-month internship in June 2019, feel free to drop me a line at
-      <a
-        class="wrapper__bold"
-      >adr.merre@gmail.com</a>.
+      I’m open to any work propositions, but I’m looking especially for an 5-month internship in June 2019, feel free to
+      <span
+        @mouseover="hiddenText.wontRegret = true"
+        @mouseleave="hiddenText.wontRegret = false"
+      >
+        <app-Link linkText="drop me a line" :linkUrl="email"/>
+      </span>.
+      <transition name="fade">
+        <appWontRegret v-if="hiddenText.wontRegret"/>
+      </transition>
     </p>
-    <div class="wrapper__hidden">
-      <h1>Hello</h1>
-    </div>
   </div>
 </template>
 
 <script>
 import Link from "../components/Link.vue";
+import ItsMe from "../components/HiddenText/ItsMe.vue";
+import YouWontRegret from "../components/HiddenText/YouWontRegret.vue";
+
 export default {
   components: {
-    appLink: Link
+    appLink: Link,
+    appItsMe: ItsMe,
+    appWontRegret: YouWontRegret
+  },
+  data() {
+    return {
+      hetic: "https://www.hetic.net/formations/grande-ecole",
+      github: "https://github.com/amerre",
+      codepen: "https://codepen.io/adrizu/",
+      email: "mailto:adr.merre@gmail.com",
+      hiddenText: {
+        itsMe: false,
+        wontRegret: false
+      }
+    };
   }
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "../scss/_variables.scss";
 .wrapper {
+  min-height: calc(100vh - 170px);
   line-height: 27px;
   .wrapper__emoji {
     font-size: 55px;
+    cursor: pointer;
   }
   p {
     font-size: 20px;
@@ -48,12 +76,14 @@ export default {
     text-decoration: none;
     color: $first-color;
   }
-  .wrapper__bold {
-    font-weight: bold;
-    color: $second-color;
-  }
-  .wrapper__hidden {
-    display: none;
-  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

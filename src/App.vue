@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
-    <TextBloc/>
-    <Footer/>
+  <div class="wrapper">
+    <appTextBloc/>
+    <appFooter/>
   </div>
 </template>
 
@@ -11,28 +11,23 @@ import Footer from "./components/Footer.vue";
 
 export default {
   name: "app",
-  data() {
-    return {
-      github: "https://github.com/amerre",
-      codepen: "https://codepen.io/adrizu/",
-      hetic: "https://www.hetic.net/formations/grande-ecole"
-    };
-  },
   components: {
-    TextBloc,
-    Footer
+    appTextBloc: TextBloc,
+    appFooter: Footer
   }
 };
 </script>
 
 <style lang="scss">
 @import "./scss/_variables.scss";
-#app {
+
+.wrapper {
   letter-spacing: 0.09px;
   font-family: "Karla", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 810px;
-  margin: 150px auto auto auto;
+  position: relative;
+  margin: 100px auto auto auto;
 }
 </style>
