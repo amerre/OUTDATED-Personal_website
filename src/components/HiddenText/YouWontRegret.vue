@@ -1,5 +1,5 @@
 <template>
-  <span class="wrapper">
+  <span class="hiddenWrapper">
     <p>You won’t regret it 🔥</p>
   </span>
 </template>
@@ -10,7 +10,7 @@ export default {};
 
 <style scoped lang="scss">
 @import "../../scss/_variables.scss";
-.wrapper {
+.hiddenWrapper {
   p {
     box-sizing: border-box;
     text-align: center;

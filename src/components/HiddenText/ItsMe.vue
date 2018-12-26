@@ -1,5 +1,5 @@
 <template>
-  <span class="wrapper">
+  <span class="hiddenWrapper">
     <p>Yes, it’s definitely me</p>
   </span>
 </template>
@@ -10,7 +10,7 @@ export default {};
 
 <style scoped lang="scss">
 @import "../../scss/_variables.scss";
-.wrapper {
+.hiddenWrapper {
   p {
     position: absolute;
     top: -90px;

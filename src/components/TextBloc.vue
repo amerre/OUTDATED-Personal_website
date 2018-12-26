@@ -61,7 +61,10 @@ export default {
 <style scoped lang="scss">
 @import "../scss/_variables.scss";
 .wrapper {
-  min-height: calc(100vh - 170px);
+  // 220 - mtop = 150
+  // 170 - mtop = 100
+  // 120 - mtop = 50
+  min-height: calc(100vh - 220px);
   line-height: 27px;
   .wrapper__emoji {
     font-size: 55px;
