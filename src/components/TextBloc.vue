@@ -4,7 +4,7 @@
       <app-ItsMe v-if="hiddenText.itsMe"/>
     </transition>
     <img
-      src="../assets/technologist.png"
+      src="../assets/images/technologist.png"
       class="wrapper__emoji"
       @mouseover="hiddenText.itsMe = true"
       @mouseleave="hiddenText.itsMe = false"
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import Link from "../components/Link.vue";
+import Link from "../components/UnderlinedLinks.vue";
 import ItsMe from "../components/HiddenText/ItsMe.vue";
 import YouWontRegret from "../components/HiddenText/YouWontRegret.vue";
 
@@ -64,7 +64,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../scss/_variables.scss";
+@import "../assets/scss/_variables.scss";
 .wrapper {
   // 220 - mtop = 150 / 170 - mtop = 100 / 120 - mtop = 50
   min-height: calc(100vh - 220px);
@@ -91,5 +91,5 @@ export default {
 .fade-leave-to {
   opacity: 0;
 }
-@import "../scss/_responsive.scss";
+@import "../assets/scss/_responsive.scss";
 </style>

@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./scss/_variables.scss";
+@import "./assets/scss/_variables.scss";
 .container {
   letter-spacing: 0.09px;
   font-family: "Karla", Helvetica, Arial, sans-serif;
@@ -37,5 +37,5 @@ export default {
   position: relative;
   margin: 150px auto auto auto;
 }
-@import "./scss/_responsive.scss";
+@import "./assets/scss/_responsive.scss";
 </style>
