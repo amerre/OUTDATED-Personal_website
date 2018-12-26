@@ -1,0 +1,23 @@
+<template>
+  <span class="hiddenWrapper">
+    <p>Yes, it’s definitely me</p>
+  </span>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style scoped lang="scss">
+@import "../../assets/scss/_variables.scss";
+.hiddenWrapper {
+  p {
+    position: absolute;
+    top: -60px;
+    left: 40px;
+    width: 200px;
+    transform: rotate(8deg);
+    font-size: 20px;
+  }
+}
+</style>

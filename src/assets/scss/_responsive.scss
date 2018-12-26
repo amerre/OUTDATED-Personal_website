@@ -1,0 +1,39 @@
+@media (max-width: 1008px) {
+  .container {
+    width: calc(100% - 150px);
+    margin-top: 100px;
+  }
+  .footer {
+    width: 100%;
+  }
+  .wrapper {
+    min-height: calc(100vh - 170px);
+  }
+}
+@media (max-width: 640px) {
+  .container {
+    width: calc(100% - 30px);
+    margin-top: 50px;
+  }
+  .footer {
+    width: 100%;
+    font-size: 14px;
+    .footer__links {
+      font-size: 18px;
+    }
+  }
+  .wrapper {
+    min-height: calc(100vh - 170px);
+    margin-bottom: 50px;
+    p {
+      font-size: 18px;
+    }
+  }
+  .hiddenWrapper {
+    display: none;
+  }
+  .wrapper a {
+    background: linear-gradient(180deg, $second-color, $second-color) no-repeat
+      0 1rem;
+  }
+}
