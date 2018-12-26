@@ -3,29 +3,26 @@
     <p>
       © 2018 Adrien Merré -
       <a
-        :href="github"
+        :href="GithubLink"
         class="footer__links fab fa-github-square"
         target="_blank"
       ></a>
-      <a :href="codepen" class="footer__links fab fa-codepen" target="_blank"></a>
-      <a :href="linkedin" class="footer__links fab fa-linkedin" target="_blank"></a>
+      <a :href="CodepenLink" class="footer__links fab fa-codepen" target="_blank"></a>
+      <a :href="LinkedinLink" class="footer__links fab fa-linkedin" target="_blank"></a>
     </p>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      github: "https://github.com/amerre",
-      codepen: "https://codepen.io/adrizu/",
-      linkedin: "https://www.linkedin.com/in/adrienmerre/"
-    };
+  props: {
+    GithubLink: String,
+    CodepenLink: String,
+    LinkedinLink: String
   }
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "../scss/_variables.scss";
 .footer {
@@ -46,4 +43,5 @@ export default {
     }
   }
 }
+@import "../scss/_responsive.scss";
 </style>

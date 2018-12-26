@@ -13,7 +13,7 @@ export default {};
 .hiddenWrapper {
   p {
     position: absolute;
-    top: -90px;
+    top: -60px;
     left: 40px;
     width: 200px;
     transform: rotate(8deg);
