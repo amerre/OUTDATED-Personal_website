@@ -9,7 +9,7 @@ export default {};
 </script>
 
 <style scoped lang="scss">
-@import "../../scss/_variables.scss";
+@import "../../assets/scss/_variables.scss";
 .hiddenWrapper {
   p {
     position: absolute;

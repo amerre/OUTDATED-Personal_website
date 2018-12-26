@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../scss/_variables.scss";
+@import "../assets/scss/_variables.scss";
 .footer {
   font-size: 16px;
   color: $third-color;
@@ -43,5 +43,5 @@ export default {
     }
   }
 }
-@import "../scss/_responsive.scss";
+@import "../assets/scss/_responsive.scss";
 </style>

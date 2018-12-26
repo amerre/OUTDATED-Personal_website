@@ -26,10 +26,9 @@ a {
   background-position-y: 0;
   background: linear-gradient(180deg, $second-color, $second-color) no-repeat 0
     1.2rem;
-  // Important is here to keep the hover's style on mobiles
-  transition: background-position-y 0.15s ease-out !important;
+  transition: background-position-y 0.15s ease-out;
   &:hover {
-    background-position-y: 0 !important;
+    background-position-y: 0;
   }
 }
 @import "../assets/scss/_responsive.scss";
