@@ -8,6 +8,7 @@
       class="wrapper__emoji"
       @mouseover="hiddenText.itsMe = true"
       @mouseleave="hiddenText.itsMe = false"
+      alt="Technologist"
     >
     <p>Hi, I’m Adrien</p>
     <p>I’m living in Montreuil, near Paris, where I’m studying in
