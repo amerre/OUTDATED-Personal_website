@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <p>
-      © 2018 Adrien Merré -
+      © {{ new Date().getFullYear() }} Adrien Merré -
       <a
         :href="GithubLink"
         class="footer__links fab fa-github-square"
