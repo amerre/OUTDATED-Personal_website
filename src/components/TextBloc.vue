@@ -15,9 +15,8 @@
       <app-Link linkText="Hetic" :linkUrl="HeticLink"/>. I’m playing around with web development, design and project management.
     </p>
     <p>I’m actualy a front-end developer, but currently learning Vue.js and Node.js in order to become a full-stack Javascript ninja.</p>
-    <p>To see some of my work, check my
-      <app-Link linkText="Github" :linkUrl="GithubLink"/>&nbsp;or my
-      <app-Link linkText="Codepen" :linkUrl="CodepenLink"/>.
+    <p>To see some of my work, you can check my
+      <app-Link linkText="Github" :linkUrl="GithubLink"/>.
     </p>
     <p>
       I’m open to any work propositions, but I’m looking especially for an 5-month internship in June 2019, feel free to
