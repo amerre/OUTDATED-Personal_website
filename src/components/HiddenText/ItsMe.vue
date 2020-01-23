@@ -1,6 +1,6 @@
 <template>
   <span class="hiddenWrapper">
-    <p>Yes, it’s definitely me</p>
+    <p>Oui, c'est vraiment moi</p>
   </span>
 </template>
 
@@ -15,7 +15,7 @@ export default {};
     position: absolute;
     top: -60px;
     left: 40px;
-    width: 200px;
+    width: 250px;
     transform: rotate(8deg);
     font-size: 20px;
   }

@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <transition name="fade">
-      <app-ItsMe v-if="hiddenText.itsMe"/>
+      <app-ItsMe v-if="hiddenText.itsMe" />
     </transition>
     <img
       src="../assets/images/technologist.png"
@@ -9,26 +9,52 @@
       @mouseover="hiddenText.itsMe = true"
       @mouseleave="hiddenText.itsMe = false"
       alt="Technologist"
-    >
-    <p>Hi, I’m Adrien</p>
-    <p>I’m living in Montreuil, near Paris, where I’m studying in
-      <app-Link linkText="Hetic" :linkUrl="HeticLink"/>. I’m playing around with web development, design and project management.
-    </p>
-    <p>I’m actualy a front-end developer, but currently learning Vue.js and Node.js in order to become a full-stack Javascript ninja.</p>
-    <p>To see some of my work, you can check my
-      <app-Link linkText="Github" :linkUrl="GithubLink"/>.
-    </p>
+    />
+    <p>Hey, moi c'est Adrien</p>
+    <p>Je vis dans la Manche, en Normandie. Mon truc c'est l'informatique et la création de contenus audiovisuels.</p>
     <p>
-      I’m open to any work propositions, but I’m looking especially for an 5-month internship in June 2019, feel free to
+      Je suis à la recherche d'une alternance pour septembre 2020, mais je suis également ouvert à tout type de proposition. N'hesitez donc pas à m'envoyer un
       <span
         @mouseover="hiddenText.wontRegret = true"
         @mouseleave="hiddenText.wontRegret = false"
       >
-        <app-Link linkText="drop me a line" :linkUrl="EmailLink"/>
+        <app-Link linkText="mail" :linkUrl="EmailLink" />
       </span>.
       <transition name="fade">
-        <appWontRegret v-if="hiddenText.wontRegret"/>
+        <appWontRegret v-if="hiddenText.wontRegret" />
       </transition>
+    </p>
+    <p>
+      Voici quelques uns de mes projets, pour en voir plus, passez par
+      <app-Link linkText="Github" :linkUrl="GithubLink" />&nbsp;ou
+      <app-Link linkText="Codepen" :linkUrl="CodepenLink" />
+    </p>
+    <p class="projects">
+      Web :
+      <br />
+      <app-Link linkText="Css-helper" :linkUrl="test" />&nbsp;: Un outil pour visualiser du CSS
+      <br />
+      <app-Link linkText="Todo-app" :linkUrl="test" />&nbsp;: Une Todo App
+      <br />
+      <app-Link linkText="Cosmopolitan" :linkUrl="test" />&nbsp;: Une refonte de la page d'accueil de Cosmopolitan
+      <br />
+      <app-Link linkText="Ikao" :linkUrl="test" />&nbsp;: Une page d'accueil d'un e-commerce fictif
+      <br />
+      <app-Link linkText="Newsletter" :linkUrl="test" />&nbsp;: Une newsletter fictive
+    </p>
+    <p class="projects">
+      Audiovisuel :
+      <br />
+      <app-Link linkText="Portrait" :linkUrl="test" />&nbsp;: Portrait d'un facteur d'orgue
+      <br />
+      <app-Link linkText="Interview" :linkUrl="test" />&nbsp;: Interview d'un photographe engagé
+      <br />
+      <app-Link linkText="Interview" :linkUrl="test" />&nbsp;: Interview de visiteurs du Louvre Lens
+      <br />
+      <app-Link linkText="Reportage" :linkUrl="test" />&nbsp;: Reportage pour la FDSEA
+      <br />
+      <app-Link linkText="Portrait" :linkUrl="test" />&nbsp;: Portrait d'un maître tapissier
+      <br />
     </p>
   </div>
 </template>
@@ -36,13 +62,11 @@
 <script>
 import Link from "../components/UnderlinedLinks.vue";
 import ItsMe from "../components/HiddenText/ItsMe.vue";
-import YouWontRegret from "../components/HiddenText/YouWontRegret.vue";
 
 export default {
   components: {
     appLink: Link,
-    appItsMe: ItsMe,
-    appWontRegret: YouWontRegret
+    appItsMe: ItsMe
   },
   data() {
     return {

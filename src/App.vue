@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <appTextBloc :HeticLink="hetic" :GithubLink="github" :CodepenLink="codepen" :EmailLink="email"/>
-    <appFooter :GithubLink="github" :CodepenLink="codepen" :LinkedinLink="linkedin"/>
+    <appTextBloc :HeticLink="hetic" :GithubLink="github" :CodepenLink="codepen" :EmailLink="email" />
+    <appFooter :GithubLink="github" :CodepenLink="codepen" :LinkedinLink="linkedin" />
   </div>
 </template>
 
@@ -34,8 +34,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 810px;
+  border: 2px solid red;
   position: relative;
-  margin: 150px auto auto auto;
+  margin: 100px auto;
 }
+
 @import "./assets/scss/_responsive.scss";
 </style>
